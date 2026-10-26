@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@property --h { syntax: '<number>'; inherits: true; initial-value: 190; }
+:root { color-scheme: dark; animation: led 40s linear infinite; }
+@keyframes led { to { --h: 550; } }
+body { @apply bg-ink font-body text-snow antialiased; }
+:focus-visible { outline: 2px solid hsl(var(--h) 95% 62%); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
